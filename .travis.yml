@@ -1,9 +1,25 @@
 dist: trusty
 language: cpp
+
+
+
+matrix:
+    include:
+        - os: osx                           # Whohoo!
+          osx_image: xcode6.4
+        - os: osx
+          osx_image: xcode7.3
+        - os: osx
+          osx_image: xcode8.0
+        - os: osx
+          osx_image: xcode8.1
+        - os: osx
+          osx_image: xcode8.2
+
 env:
-    - COMPILER=g++-6                        # Helps the Travis to correctly show version
-    - COMPILER=clang++-3.9                  # Helps the Travis to correctly show version
-    - COMPILER=clang++-4.0                  # Helps the Travis to correctly show version
+    - COMPILER=g++-6
+    - COMPILER=clang++-3.9
+    - COMPILER=clang++-4.0
 
 addons:
     apt:
