@@ -1,0 +1,18 @@
+build: trusty
+build_script:
+    - mkdir build && cd build
+    - cmake -G "%TOOLCHAIN_VERSION%" ..
+    - cmake --build . --config %BUILD_TYPE%
+
+test_script:
+    - cmd: "%BUILD_TYPE%/hello"
+
+
+environment:
+    matrix:
+        - TOOLCHAIN_VERSION: Visual Studio 14 Win64
+          BUILD_TYPE: Release
+        - TOOLCHAIN_VERSION: Visual Studio 14 Win64
+          BUILD_TYPE: Debug
+        - TOOLCHAIN_VERSION: Unix Makefile
+          BUILD_TYPE: Release
