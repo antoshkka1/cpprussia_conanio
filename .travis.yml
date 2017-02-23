@@ -1,8 +1,17 @@
 dist: trusty
 language: cpp
+env:
+    - COMPILER=g++-6  # Helps the Travis to correctly show version
+addons:
+    apt:
+        sources:
+            - ubuntu-toolchain-r-test
+        packages:
+            - g++-6
+
 
 script:
     - mkdir build && cd build
-    - cmake ..
+    - cmake .. -DCMAKE_CXX_COMPILER=g++-6
     - cmake --build .
     - ./hello
