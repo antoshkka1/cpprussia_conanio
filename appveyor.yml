@@ -1,4 +1,3 @@
-build: trusty
 build_script:
     - set PATH=%PATH%;C:\\MinGW\\bin;C:\\MinGW\\msys\\1.0\\bin
     - mkdir build && cd build

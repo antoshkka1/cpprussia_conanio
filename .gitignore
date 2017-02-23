@@ -4,4 +4,7 @@ Makefile
 cmake_install.cmake
 hello
 libhello*
+CTestTestfile.cmake
+conanbuildinfo.cmake
+test/bin*
 
