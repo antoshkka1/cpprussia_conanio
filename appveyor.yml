@@ -5,7 +5,7 @@ build_script:
     - cmake --build . --config %BUILD_TYPE%
 
 test_script:
-    - cmd: "%BUILD_TYPE%/hello.exe"
+    - cmd: "%BUILD_TYPE%\\hello.exe"
 
 
 environment:
