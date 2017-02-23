@@ -11,7 +11,7 @@ set(${PROJECT_NAME}_SRC
     src/hello.cpp
 )
 
-#add_library(${PROJECT_NAME} ${${PROJECT_NAME}_SRC})
+add_executable(${PROJECT_NAME} ${${PROJECT_NAME}_SRC})
 
 #set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 14)
 
